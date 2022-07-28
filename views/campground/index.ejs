@@ -1,0 +1,43 @@
+<% layout('/layouts/boilerplate') %>
+
+
+    <h1> All campground</h1>
+
+    <!-- render all camp in boostrap card -->
+    <% for(let camp of campground){ %>
+
+        <div class="card md-3">
+            <div class="row">
+
+                <!-- card image -->
+                <div class="col-md-4">
+                    <img class="img-fluid" src="<%= camp.image %> " alt="">
+                </div>
+
+                <!-- card infomtion -->
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= camp.title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= camp.description %>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%= camp.location %>
+                            </small>
+                        </p>
+
+                        <a href="/campground/<%= camp._id %> " class="btn btn-primary">
+                            <%= camp.title %>
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <% } %>

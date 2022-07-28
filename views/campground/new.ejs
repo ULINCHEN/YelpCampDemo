@@ -1,0 +1,52 @@
+<% layout('/layouts/boilerplate') %>
+
+
+    <div class="row">
+        <h1 class="text-center"> New Campground </h1>
+        <div class="col-6 offset-3">
+
+            <!-- Form body -->
+            <form action="/campground" method="post">
+                <!-- title -->
+                <div class="mb-3">
+                    <label class="form-lable" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]">
+                </div>
+                <!-- location -->
+                <div class="mb-3">
+                    <label class="form-lable" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]">
+                </div>
+                <!-- image -->
+                <div class="mb-3">
+                    <label class="form-lable" for="image">Image URL</label>
+                    <input class="form-control" type="text" id="location" name="campground[image]">
+                </div>
+
+                <!-- price -->
+                <div class="mb-3">
+                    <label class="form-lable" for="price">price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-lable">$</span>
+                        <input type="number" class="form-control" id="price" name="campground[price]" aria-label=" Amount
+                            (to the nearest dollar)" placeholder="0.00">
+
+                    </div>
+                </div>
+                <!-- description -->
+                <div class="mb-3">
+                    <label class="form-lable" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description"
+                        name="campground[description]"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <button class="btn btn-success">submit</button>
+                </div>
+            </form>
+
+            <div>
+                <a href="/campground">All CampGround</a>
+            </div>
+        </div>
+    </div>
