@@ -6,21 +6,39 @@
         <div class="col-6 offset-3">
 
             <!-- Form body -->
-            <form action="/campground" method="post">
+            <form action="/campground" method="post" novalidate class="needs-validation">
                 <!-- title -->
                 <div class="mb-3">
                     <label class="form-lable" for="title">Title</label>
-                    <input class="form-control" type="text" id="title" name="campground[title]">
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please intput your camp title.
+                    </div>
                 </div>
                 <!-- location -->
                 <div class="mb-3">
                     <label class="form-lable" for="location">Location</label>
-                    <input class="form-control" type="text" id="location" name="campground[location]">
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please intput your camp location.
+                    </div>
                 </div>
                 <!-- image -->
                 <div class="mb-3">
                     <label class="form-lable" for="image">Image URL</label>
-                    <input class="form-control" type="text" id="location" name="campground[image]">
+                    <input class="form-control" type="text" id="location" name="campground[image]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please intput your image URL.
+                    </div>
                 </div>
 
                 <!-- price -->
@@ -28,8 +46,14 @@
                     <label class="form-lable" for="price">price</label>
                     <div class="input-group">
                         <span class="input-group-text" id="price-lable">$</span>
-                        <input type="number" class="form-control" id="price" name="campground[price]" aria-label=" Amount
-                            (to the nearest dollar)" placeholder="0.00">
+                        <input type="text" class="form-control" id="price" name="campground[price]" aria-label=" Amount
+                            (to the nearest dollar)" placeholder="0.00" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please intput your camp price.
+                        </div>
 
                     </div>
                 </div>
